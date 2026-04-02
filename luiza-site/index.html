@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Luiza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <header class="hero glass">
+            <h1 class="title">Destino: Curitiba ✈️</h1>
+            <h2 class="subtitle">Prazer, <span>Luiza!</span></h2>
+            <p class="intro">Seu espaço digital interativo, feito sob medida. Sem IA, só programação com carinho.</p>
+        </header>
 
+        <section class="gallery">
+            <!-- POKÉMON (CUBONE) CARD -->
+            <div class="card glass interactive-card">
+                <div class="card-header">
+                    <div class="card-icon">🦴</div>
+                    <h3>Seu Parceiro Leal</h3>
+                </div>
+                <p>Nenhuma jornada está completa sem o seu favorito. Cuide bem do Cubone e veja como ele fica feliz!</p>
+                <div class="cubone-stage">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/104.gif" alt="Cubone Animado" id="cuboneSprite" class="pokemon-sprite">
+                    <div id="berryContainer"></div>
+                </div>
+                <button id="feedCuboneBtn" class="action-btn">🍒 Dar uma Berry para o Cubone</button>
+            </div>
+
+            <!-- ROCK N' ROLL CARD -->
+            <div class="card glass interactive-card">
+                <div class="card-header">
+                    <div class="card-icon">🎸</div>
+                    <h3>Rock N' Roll</h3>
+                </div>
+                <p>Não há viagem sem trilha sonora. Toque nas notas abaixo para fazer um pequeno som e curtir o ritmo!</p>
+                
+                <div class="drum-pad">
+                    <div class="pad" data-sound="kick">
+                        <span class="pad-icon">🥁</span>
+                        <span class="pad-label">Grave</span>
+                    </div>
+                    <div class="pad" data-sound="snare">
+                        <span class="pad-icon">🥁</span>
+                        <span class="pad-label">Caixa</span>
+                    </div>
+                    <div class="pad" data-sound="guitar1">
+                        <span class="pad-icon">🎸</span>
+                        <span class="pad-label">Acorde 1</span>
+                    </div>
+                    <div class="pad" data-sound="guitar2">
+                        <span class="pad-icon">🎸</span>
+                        <span class="pad-label">Acorde 2</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WORD SEARCH CARD -->
+            <div class="card glass interactive-card word-card">
+                <div class="card-header">
+                    <div class="card-icon">🔍</div>
+                    <h3>Segredos Escondidos</h3>
+                </div>
+                <p>Consegue achar as 4 palavras escondidas? (ROCK, CUBONE, CURITIBA, VIAGEM). Arraste e selecione com o mouse!</p>
+                
+                <div class="word-search-container">
+                    <div id="wordGrid" class="word-grid"></div>
+                    <div class="words-status">
+                        Encontre: 
+                        <span class="target-word" id="word-rock">ROCK</span> | 
+                        <span class="target-word" id="word-cubone">CUBONE</span> | 
+                        <span class="target-word" id="word-curitiba">CURITIBA</span> | 
+                        <span class="target-word" id="word-viagem">VIAGEM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer glass">
+            <p>O GPS já está configurado. ❤️</p>
+            <button id="surpriseBtn" class="btn">✈️ Embarcar</button>
+        </footer>
+    </div>
+
+    <!-- Modal de Surpresa -->
+    <div id="surpriseModal" class="modal">
+        <div class="modal-content glass">
+            <h2 class="countdown-title">Falta Pouco! ⏱️</h2>
+            <p>Vou chegar amanhã às 10h. Contagem regressiva:</p>
+            <div id="countdown" class="countdown-display">00h 00m 00s</div>
+            <p class="pixel-text">O voo tá chegando...</p>
+            <button id="closeModalBtn" class="btn action-btn">Voltar</button>
+        </div>
+    </div>
+
+    <!-- Particles.js para efeito de fundo dinâmico -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
